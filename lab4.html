@@ -10,27 +10,19 @@
 	</style>
 	<script>
 		function rasskaz(){
-			var pole=document.getElementById('f');
+			var pole=document.getElementById('hero');
 			var p1=pole.value;
-			pole=document.getElementById('i');
-			var p2=pole.value;
-			pole=document.getElementById('o');
-			var p3=pole.value;
-			pole=document.getElementById('date');
-			var p4=pole.value;
-			pole=document.getElementById('city');
-			var p5=pole.value;
 			pole=document.getElementById('like');
-			var p6=pole.value;
-			pole=document.getElementById('dontlike');
-			var p7=pole.value;
+			var p2=pole.value;
+			pole=document.getElementById('friend');
+			var p3=pole.value;
+			pole=document.getElementById('present');
+			var p4=pole.value;
 			var win=window.open("","","width=400 height=400");
 			win.document.open();
-			var str="<h1>О себе</h1><hr>";
+			var str="<h1>"+p1+" и "+p4+"</h1><hr>";
 			win.document.write(str);
-			str="<p>Я, "+p1+" "+p2+" "+p3+", родился в "+p4+" году в городе "+p5+".<br>";
-			win.document.write(str);
-			str="Больше всего я люблю "+p6+" и очень не люблю "+p7+". Было бы замечательно, всю жизнь только "+p6+", но, к сожалению, приходится иногда и "+p7+".</p>";
+			str="<p>В одном лесу жила маленькая, "+p1+", которая очень любила "+p2+" чудесные песни. У нее так хорошо получалось, что весь лес собирался послушать её! От сороки она узнала, что у людей принято дарить "+p4+" любимым исполнителям. А "+p4+" она любила также сильно, как и "+p2+". Долго грустила "+p1+". Но однажды, после очередного импровизированного концерта, "+p3+" подлетел к "+p1+" и подарил ей... "+p4+". Уж он то был истинным джентельменом! "+p1+" была невероятно счастлива!!!<br>";
 			win.document.write(str);
 			str='<input type="button" value="закрыть" OnClick="window.close();">';
 			win.document.write(str);
@@ -38,24 +30,18 @@
 		}
 	</script>
 	<body>
-		<h1>Анкета</h1>
+		<h1>Генератор сказок</h1>
 		<hr>
 		<form>
-		 	 <p>Фамилия:
-				 <input type="text" value="Гончарова" name="f" id='f' size="30"></p>
-			 <p>Имя:
-				 <input type="text" value="Виктория" name="i" id='i' size="30"></p>
-			 <p>Отчество:
-				 <input type="text" value="Сергеевна" name="o" id='o' size="30"></p>
-			 <p>Год рождения:
-				 <input type="text" value="1997" name="date" id='date' size="30"></p>
-			 <p>Место рождения:
-				 <input type="text" value="Ростов-на-Дону" name="city" id='city' size="30"></p>
+		 	 <p>Имя героя:
+				 <input type="text" value="пташка" name="hero" id='hero' size="30"></p>
 			 <p>Любимое занятие:
-				 <input type="text" value="спать" name="like" id='like' size="30"></p>
-			 <p>Не любимое занятие:
-				 <input type="text" value="просыпаться к 1 паре" name="dontlike" id='dontlike' size="30"></p>
-			 <input type="button" value="Сформировать биографию" OnClick="rasskaz()">
+				 <input type="text" value="петь" name="like" id='like' size="30"></p>
+			 <p>Друг героя:
+				 <input type="text" value="дятел" name="friend" id='friend' size="30"></p>
+			 <p>Любимый подарок:
+				 <input type="text" value="цветы" name="present" id='present' size="30"></p>
+			 <input type="button" value="Сгенерировать сказку" OnClick="rasskaz()">
 		</form>
 	</body>
 </html>
